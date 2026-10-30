@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Water Quest</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <main class="container">
+    <img
+      class="charity-water-logo"
+      src="img/cw_logo_horizontal.png"
+      alt="charity: water">
+
+    <h1>Water Quest</h1>
+
+    <p class="game-instructions">
+      Click <strong>Start Game</strong>, then tap the yellow jerry can each time it appears.
+      Collect 20 cans in 30 seconds. Missing a can or tapping an empty tile costs 1 point.
+    </p>
+
+    <div class="stats" aria-label="Game status">
+      <p>Cans Collected: <span id="current-cans">0</span></p>
+      <p>Time Left: <span id="timer">30</span>s</p>
+    </div>
+
+    <div
+      id="achievements"
+      class="achievement"
+      role="status"
+      aria-live="polite">
+      Press Start Game when you're ready.
+    </div>
+
+    <div
+      class="game-grid"
+      role="group"
+      aria-label="Nine-tile game grid">
+    </div>
+
+    <div class="game-controls">
+      <button id="start-game" type="button">Start Game</button>
+      <button id="reset-game" type="button" hidden>Reset</button>
+    </div>
+  </main>
+
+  <div id="confetti" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
